@@ -1,0 +1,9 @@
+{
+  "source": "\\\\GSOBOSSSQLCL02\\d$\\sqlbackups",
+  "destination": "\\\\aaws01w6\\F$\\GSOBOSSSQLCL02-Cold-Storage",
+  "schedule": {
+    "hour": 14,
+    "min": 5,
+    "maxAge": 30
+  }
+}
