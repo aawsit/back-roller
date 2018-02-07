@@ -10,6 +10,9 @@ const archive = require('./archive');
 
 const util = require('./util');
 const watch = require('./watch');
+
+// TODO: Modify the Config to house an array of locations to backup.
+// TODO: Allow iteration over scheduled jobs.
 // fs.stat(config.source, (err, stat) => {
 //   if(err)
 //     log.error({Error: err});
