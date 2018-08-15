@@ -1,6 +1,7 @@
 const fs = require('fs');
 const mv = require('mv');
 const path = require('path');
+const log = require('./logger');
 
 module.exports = {
   now(fileList, destination){
@@ -12,6 +13,11 @@ module.exports = {
           log.info({fileMove: 'File Moved Successfully'});
         });
       }
+    }
+  },
+  later(fileList){
+    for(let file of fileList){
+      if(file.archiveDate <= (Date.now().getMonth() - 9) )
     }
   }
 }

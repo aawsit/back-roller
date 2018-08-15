@@ -1,4 +1,6 @@
 # Windows image file caches
+daemon/
+logs/
 Thumbs.db
 ehthumbs.db
 node_modules/

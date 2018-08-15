@@ -20,9 +20,13 @@ watch.beginWatch(config.source);
 ns.scheduleJob('0 0 10 * * * ',() => {
   util.ensureFolders(config.source, config.destination)
 });
-ns.scheduleJob('0 18 15 * * * ',() => {
+ns.scheduleJob('0 38 8 * * * ',() => {
     log.info({message: 'running archive operation'});
     archive.now(watch.getWatchFiles(), config.destination);
+});
+ns.scheduleJob('0 38 20 * * *', () => {
+  log.info({message: 'Running Rotate Out Operation'});
+
 });
 
 log.info({message: 'App Has Launched Successfully'});
